@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ProgressLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".QuizActivity">
+
+    <TextView
+        android:id="@+id/WelcomeMsg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="@string/welcome_string"
+        android:textSize="18sp"
+        android:textColor="#000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/qNumber"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:text="@string/question_number"
+            android:textColor="#000000" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:indeterminateOnly="false"
+            android:max="5"
+            android:progress="3"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/qCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textColor="#000000"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/qDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="18dp"
+        android:textColor="#4E4E4E" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="75dp">
+
+        <Button
+            android:id="@+id/answerOne"
+            android:layout_width="275dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="25dp"
+            android:backgroundTint="@color/answer_button_color"
+            android:onClick="onClick"
+            android:text="Answer 1" />
+
+        <Button
+            android:id="@+id/answerTwo"
+            android:layout_width="275dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="25dp"
+            android:backgroundTint="@color/answer_button_color"
+            android:onClick="onClick"
+            android:text="Answer 2" />
+
+        <Button
+            android:id="@+id/answerThree"
+            android:layout_width="275dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/answer_button_color"
+            android:onClick="onClick"
+            android:text="Answer 3" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/submit_button_color"
+            android:onClick="submitButtonClicked"
+            android:text="@string/submit_button_string" />
+
+    </LinearLayout>
+
+</LinearLayout>
